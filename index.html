@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Banner HB</title>
+	<meta charset="utf-8">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estilos-dist.css">
+</head>
+<body>	
+	<div class="container">
+		<div class="row">
+			<div class="hidden-xs hidden-sm  col-md-6 banner-image-content">
+				<div class="banner-image"></div>
+			</div>
+		<div>
+		<div class="row">
+			<div class="banner-container">
+					<div class="row">
+						<div class="banner-header col-sm-12 col-md-7 col-md-offset-5">
+							<h1>El fraude existe... <span class="banner-t1">PERO </span><span class="banner-t2"> tú, puedes evitarlo</span></h1>
+						</div>
+					</div>
+					<div class="banner-body">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="row">
+									<div class="list-mensajes col-sm-12 col-md-6 col-md-offset-6">
+										<h3><b>Algunos Tips</b></h3>
+										<ul class="list-unstyled ">
+								            <li>
+								                <i class="fa  fa-circle text-danger"></i>
+								                Asegúrate escribir tú mismo la dirección de la página web de Caja Sullana: <b>www.cajasullana.pe</b>, al elegir cerciórate que has ingresado correctamente
+								            </li>
+								            <li>
+								                <i class="fa fa-circle text-danger"></i>
+								                   Te recomendamos no acceder a nuestro homebanking desde una cabina de internet. Personaliza tu HomeBanking, es decir elije un avatar (ícono) y color para tu pantalla.
+								            </li>
+								            <li>
+								                <i class="fa fa-circle text-danger"></i>
+								                    Nunca ingreses a través de enlaces que te llegan por correo electrónico
+								            </li>
+								            <li>
+								                <i class="fa fa-circle text-danger"></i>
+								                    LA CAJA <b>nunca</b> te pedirá que ingreses información confidencial como: clave de tarjeta, coordenadas, datos de tus cuentas, entre otros.
+								            </li>
+								            <li>
+								                <i class="fa fa-circle text-danger"></i>
+								                Para el ingreso de la clave de 6 dígitos y coordenadas usa solo el teclado virtual.
+								            </li>
+								        </ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="banner-footer col-sm-12 col-md-7 col-md-offset-5 text-center">
+								<button class="btn btn-warning">ACEPTO HABER LEIDO ESTOS TIPS</button>
+								<img src="images/logo.png" class="image-logo">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script   src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var alto_banner = $('.banner-container').outerHeight() + 4;
+			$('.banner-image-content').css('height',alto_banner);
+			$('.banner-image-content').removeClass('hidden');
+			console.log(alto_banner)
+		})
+	</script>
+</body>
+</html>
