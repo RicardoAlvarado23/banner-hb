@@ -5,29 +5,40 @@
 	box-sizing: border-box;
 }
 
+body{
+	background-color: #FBF8F8;
+	display: flex;
+	justify-content:center;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	min-height: 100vh;
+}
 
+.row{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.wrapper{
+	position: relative;
+}
 
 .banner-container{
-	width: 80%;
+	width: 100%;
     border: 8px solid red;
-    border-radius: 5em;
+    border-radius: 2em;
     overflow: hidden;
     background: red;
     z-index: 2;
      -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.16), 1px 1px 10px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.16), 1px 1px 10px 0 rgba(0, 0, 0, 0.12);
-	position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%); 
+
 
 }
 
 
 .banner-header{
-	padding: 5px;
-	text-align: right;
 	font-weight: bold;
 	color: #fff;
 	letter-spacing: 0.2em;
@@ -37,6 +48,8 @@
 .banner-header h1{
 	font-weight: bold;
 	font-family: sans-serif;
+	font-size: 32px;
+	text-align: center;
 }
 
 .banner-t1, .banner-t2{
@@ -46,13 +59,13 @@
 .banner-body{
 	background-color: #fff;
 	position: relative;
-	padding-top: 45px;
-	padding-bottom: 45px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .banner-footer{
-	margin-top: 35px;
-	margin-bottom : 10px;
+	margin-top: 5px;
+	margin-bottom : 5px;
 }
 
 .banner-footer button{
@@ -61,10 +74,19 @@
 
 .list-mensajes{
 	text-align: justify;
-	padding: 5px 35px 5px 5px;
+	padding: 5px;
 	margin-top: 10px;
 	letter-spacing: 0.015px;
 	line-height: 22px;
+	font-size: 12px;
+}
+
+.list-mensajes ul{
+	margin-left: 5px;
+}
+
+.list-mensajes h3{
+	font-size: 18px;
 }
 
 .list-mensajes li{
@@ -76,37 +98,157 @@
 }
 
 .image-logo{
-	width: 250px;
-	padding-left: 35px;
+	width: 200px;
+	margin-top: 10px;
 }
 
 .banner-image-content{
 	position: absolute;
-    left: 9%;
+	top: 0;
+	left: 0;
+    /*left: 15%;
     top: 50%;
     transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%); 
+    -webkit-transform: translate(0, -50%); */
     z-index: 100;
     display: none
 }
 
 .banner-image{
 	background-image: url('../images/banner-fraude.png');
-	position: absolute;
+	/*position: absolute;*/
 	height: 100%;
-	z-index: 100;
-	width: 500px;
+	width: 400px;
 	background-size: cover;
-	background-position: top center;
+	background-repeat: no-repeat;
 }
 
-@media (min-width: 1200px){
+
+@media (min-width: 547px){
+	.image-logo{
+	margin-top: 10px;
+	padding-left: 5px;
+	}
+
+}
+
+
+@media (min-width: 768px) { 
 	.banner-header h1{
-		font-size: 45px;
+		font-size: 34px;
+	}
+
+	.image-logo{
+	margin-top: 0px;
+	padding-left: 5px;
+	}
+
+	.banner-container{
+		border-radius: 3em;
+	}
+
+	.banner-body{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	}
+
+	.list-mensajes{
+		font-size: 13px;
+	}
+
+	.list-mensajes ul{
+		margin-left: 10px;
+	}
+
+	.list-mensajes h3{
+		font-size: 20px;
+	}
+
+	.banner-footer{
+	margin-top: 8px;
+	margin-bottom : 8px;
+	}
+
+}
+
+
+@media (min-width: 992px) { 
+
+	.image-logo{
+		width: 250px;
+		padding-left: 35px;
+	}
+
+
+	.banner-header{
+		text-align: right;
+	}
+	.banner-header h1{
+		font-size: 38px;
+		text-align: right;
+	}
+
+	.banner-container{
+		border-radius: 4em;
+	}
+
+	.list-mensajes h3{
+		font-size: 24px;
+	}
+
+	.banner-footer{
+	margin-top: 10px;
+	margin-bottom : 10px;
+}
+
+	.list-mensajes{
+		font-size: 14px;
+		
+	}
+
+	.list-mensajes ul{
+		margin-left: 20px;
+	}
+
+	.banner-body{
+	padding-top: 35px;
+	padding-bottom: 35px;
 	}
 
 	.banner-image-content{
 		display: block;
+	}
+
+	.banner-image{
+		width: 400px;
+		background-position: 99%;
+	}
+
+}
+
+
+@media (min-width: 1200px){
+	
+	.banner-header{
+		padding: 5px;
+	}
+
+	.banner-header h1{
+		font-size: 45px;
+		margin-top: 12px;
+	}
+
+
+
+	.banner-footer{
+	margin-top: 12px;
+	margin-bottom : 10px;
+	}
+
+
+	.banner-image{
+		width: 500px;
+		background-position: top center;
 	}
 
 }

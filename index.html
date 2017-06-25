@@ -9,16 +9,23 @@
 </head>
 <body>	
 	<div class="container">
-		<div class="row">
-			<div class="hidden-xs hidden-sm  col-md-6 banner-image-content">
-				<div class="banner-image"></div>
-			</div>
-		<div>
-		<div class="row">
+		
+		<div class="row wrapper">
+			<div class="row">
+				<div class="banner-image-content">
+					<div class="banner-image"></div>
+				</div>
+			<div>
 			<div class="banner-container">
+						<!--<div class="row">
+							<div class="hidden-xs hidden-sm  col-md-6 banner-image-content">
+								<div class="banner-image"></div>
+							</div>
+						<div>-->
+					
 					<div class="row">
 						<div class="banner-header col-sm-12 col-md-7 col-md-offset-5">
-							<h1>El fraude existe... <span class="banner-t1">PERO </span><span class="banner-t2"> tú, puedes evitarlo</span></h1>
+							<h1>El fraude existe... <span class="banner-t1">PERO tú, puedes evitarlo</span></h1>
 						</div>
 					</div>
 					<div class="banner-body">
@@ -67,11 +74,15 @@
 	<script   src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			var alto_banner = $('.banner-container').outerHeight() + 4;
+			var alto_banner = $('.banner-container').height() ;
 			$('.banner-image-content').css('height',alto_banner);
 			$('.banner-image-content').removeClass('hidden');
 			console.log(alto_banner)
 		})
+		window.onresize = function(event) {
+  			var alto_banner = $('.banner-container').height() ;
+			$('.banner-image-content').css('height',alto_banner);
+		};
 	</script>
 </body>
 </html>
